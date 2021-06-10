@@ -5,7 +5,7 @@ import { Button, Container, Menu } from 'semantic-ui-react'
 export default function Navi() {
     return (
         <div>
-            <Menu inverted fixed>
+            <Menu inverted fixed="top">
                 <Container>
                     <Menu.Item
                         name='home'
@@ -15,9 +15,7 @@ export default function Navi() {
                     />
 
                     <Menu.Menu position='right'>
-                        <CartSummary/>
-
-
+                            <CartSummary />
                         <Menu.Item>
                             <Button primary>Sign Up</Button>
                         </Menu.Item>
