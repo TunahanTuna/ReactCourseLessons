@@ -1,0 +1,1 @@
+var deneme = 1;
