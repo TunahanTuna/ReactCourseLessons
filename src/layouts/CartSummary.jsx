@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { Dropdown } from 'semantic-ui-react'
-
+// Single Page App. için Bu NavLink önemli.
 
 export default function CartSummary() {
     return (

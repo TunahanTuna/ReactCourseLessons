@@ -4,12 +4,14 @@ import SignedOut from './SignedOut'
 import SignedIn from './SignedIn'
 
 import { Container, Menu } from 'semantic-ui-react'
+import { NavLink, useHistory } from 'react-router-dom'
 
 export default function Navi() {
     const [isAuthenticated, setIsAuthenticated] = useState(true);
-
+    const history = useHistory(); // Çıkış yapıldığında anasayfaya gidebilmek için.
     function handleSignOut() {
         setIsAuthenticated(false);
+        history.push("/")
     }
     function handleSignIn() {
         setIsAuthenticated(true)
@@ -19,7 +21,7 @@ export default function Navi() {
         <div>
             <Menu inverted fixed="top">
                 <Container>
-                    <Menu.Item
+                    <Menu.Item as={NavLink} to="/"
                         name='home'
                     />
                     <Menu.Item
