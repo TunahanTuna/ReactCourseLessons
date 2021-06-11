@@ -3,13 +3,13 @@ import { Icon, Menu, Table } from 'semantic-ui-react'
 import ProductService from '../services/productService';
 
 export default function ProductList() {
-
+    // React Hooks
     const [products, setProducts] = useState([]);
 
     useEffect(()=>{
         let productService = new ProductService();
         productService.getProducts().then(result=> setProducts(result.data.data));
-    });
+    },[]);
 
     return (
         <div>
