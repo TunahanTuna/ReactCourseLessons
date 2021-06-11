@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { Icon, Menu, Table } from 'semantic-ui-react'
 import ProductService from '../services/productService';
 
+
+//Root işlemleri npm install react-router-dom
 export default function ProductList() {
     // React Hooks
     const [products, setProducts] = useState([]);
